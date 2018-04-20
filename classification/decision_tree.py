@@ -12,7 +12,7 @@ def encode_column(df, column):
     df_copy["Encode"+column] = df_copy[column].replace(map_to_int)
     return (df_copy, options)
 
-df = pd.read_csv('genres_training.csv')
+df = pd.read_csv('../data/genres_training.csv')
 
 df, targets = encode_column(df, 'genre')
 
@@ -32,7 +32,7 @@ print("Accuracy of Training:{0:.3f}".format(metrics.accuracy_score(Y, Y_pred)))
 
 
 ## TESTING
-df_test = pd.read_csv('genres_testing.csv')
+df_test = pd.read_csv('../data/genres_testing.csv')
 df_test, t = encode_column(df_test, 'genre')
 
 Y_test = df_test['Encodegenre']
