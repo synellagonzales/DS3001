@@ -1,0 +1,32 @@
+<!doctype HTML>
+<html>
+    <head>
+        <title>Wspotipy</title>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://code.highcharts.com/highcharts.js"></script>
+        <script src="http://code.highcharts.com/modules/data.js"></script>
+        <script src="http://code.highcharts.com/modules/exporting.js"></script>
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+ 
+    </head>
+    <body>
+        <table id="datatable" border="1" class="table table-hover ">
+            <tr>
+                <th>Select</th>
+                <th>Name</th>
+                <th>Projects</th>
+            </tr>
+        </table>
+        <div class="container">
+            <div class="row">
+                <div class="span7 text-center">
+                    <button class="btn btn-primary" id="generate_btn">Generate</button>
+                </div>
+            </div>
+        </div>
+        <div id="container" style="min-width: 400px; height: 400px; margin: 0 auto"></div>  
+        <script src="piechart.js"></script>
+    </body>
+</html>
