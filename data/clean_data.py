@@ -27,3 +27,13 @@ merged = pd.merge(df, originals, left_index=True, right_index=True, suffixes=(''
 
 merged.to_csv('normalized_data.csv', index=False)
 
+
+validation = pd.read_csv('validation_genres.csv')
+validation = pd.get_dummies(validation, columns=['key'])
+validation_orig = validation[scale_cols]
+validation[scale_cols] = scaler.transform(validation[scale_cols])
+
+validation_merge = pd.merge(validation, validation_orig, left_index=True,
+                            right_index=True, suffixes=('', '_original'))
+
+validation_merge.to_csv('validation_normalized.csv', index=False)
