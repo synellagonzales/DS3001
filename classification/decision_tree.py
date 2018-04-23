@@ -41,6 +41,19 @@ X_test = df_test[features]
 Y_test_pred = dt.predict(X_test)
 print("Accuracy of Testing Set:{0:.3f}".format(metrics.accuracy_score(Y_test, Y_test_pred)))
 
+
+df_validation = pd.read_csv('../data/validation_normalized.csv')
+df_validation, t = encode_column(df_validation, 'genre')
+Y_valid = df_validation['Encodegenre']
+X_valid = df_validation[features]
+
+Y_valid_pred = dt.predict(X_valid)
+
+Y_valid_pred = [targets[x] for x in Y_valid_pred]
+df_validation['genre_predicted'] = Y_valid_pred
+
+df_validation.to_csv('../data/validation_predicted.csv')
+
 porter = Porter(dt, language='js')
 output = porter.export(embed_data=True)
 
