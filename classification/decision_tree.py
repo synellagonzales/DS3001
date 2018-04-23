@@ -52,7 +52,7 @@ Y_valid_pred = dt.predict(X_valid)
 Y_valid_pred = [targets[x] for x in Y_valid_pred]
 df_validation['genre_predicted'] = Y_valid_pred
 
-df_validation.to_csv('../data/validation_predicted.csv')
+df_validation.to_csv('../data/validation_predicted.csv', index=False)
 
 porter = Porter(dt, language='js')
 output = porter.export(embed_data=True)
