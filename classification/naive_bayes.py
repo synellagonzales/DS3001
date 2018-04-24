@@ -2,7 +2,6 @@
 import pandas as pd
 from sklearn.naive_bayes import GaussianNB
 from sklearn import metrics
-from sklearn_porter import Porter
 
 
 
@@ -47,9 +46,3 @@ X_test = df_test[features]
 Y_test_pred = fit.predict(X_test)
 
 print("Accuracy of Testing:{0:.3f}".format(metrics.accuracy_score(Y_test, Y_test_pred)))
-
-porter = Porter(gnb, language='js')
-output = porter.export(embed_data=True)
-
-with open('GaussianNB.js', 'w') as f:
-    f.write(output)

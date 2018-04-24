@@ -3,7 +3,6 @@ from sklearn.tree import DecisionTreeClassifier, export_graphviz
 from sklearn import metrics
 
 import pandas as pd
-from sklearn_porter import Porter
 
 def encode_column(df, column):
     df_copy = df.copy()
@@ -53,9 +52,3 @@ Y_valid_pred = [targets[x] for x in Y_valid_pred]
 df_validation['genre_predicted'] = Y_valid_pred
 
 df_validation.to_csv('../data/validation_predicted.csv', index=False)
-
-porter = Porter(dt, language='js')
-output = porter.export(embed_data=True)
-
-with open('DecisionTreeClassifier.js', 'w') as f:
-    f.write(output)
