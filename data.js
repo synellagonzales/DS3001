@@ -43,7 +43,7 @@ function genTable() {
             row++;
             tr = $('<tr/>');
             var song = validation_data[songs[i]];
-            tr.append("<td>" + "<input type=\"checkbox\" id=\"check" + row + "\" />" + "</td>");
+            tr.append("<td>" + "<input type=\"radio\" name=\"song\" id=\"check" + row + "\" />" + "</td>");
             tr.append("<td>" + songs[i] + "</td>");
             tr.append("<td>" + song.genre_predicted + "</td>");
             tr.append("<td>" + song.genre + "</td>");
