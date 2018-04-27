@@ -2,6 +2,10 @@ $(function () {
     $('#generate_btn').click(function () {
         genSpider();
     });
+    $('#alternative').click(function () {
+        //var type = Alternative
+        genSpider();
+    });
 });
 
 function genSpider() {
