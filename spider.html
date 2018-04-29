@@ -10,9 +10,18 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <h1>
+            <center>
+                <font color="teal"</font>W-Spotipy Genre Predictor </font></center>
+        </h1>
+        <h4>
+            <center>By: Madeline Burke, Caroline Johnston, Synella Gonzales, and Kevin O&#39Brien</center>
+        </h4>
  
     </head>
     <body>
+        <h3>1. Select a song.</h3>
         <table id="datatable" border="1" class="table table-hover ">
             <tr>
                 <th>Select</th>
@@ -21,10 +30,11 @@
                 <th>Actual Genre</th>
             </tr>
         </table>
+        <h3>2. Generate the radar graph of the selected song&#39s characteristics.</h3>
         <div class="container">
             <div class="row">
                 <div class="span7 text-center">
-                    <button class="btn btn-primary" id="generate_btn">Generate</button>
+                    <button class="btn btn-primary" id="generate_btn" style="height:60;width:110px" font-size:"24px">Generate</button>
                 </div>
             </div>
         </div>
@@ -33,28 +43,29 @@
         <script src="averages_data.js"></script>
         <script src="data.js"></script>
         <script src="spider.js"></script>
+        <h3>3. Select another genre to compare to the selected song.</h3>
         <div id="container">
             <div class="row">
                 <div class="span7 text-center">
-                    <button class="btn btn-secondary" id="alternative">Alternative</button>
+                    <button class="btn btn-secondary" id="alternative" style="height:50px;width:110px" font-size:"18px">Alternative</button>
                     &nbsp;
-                    <button class="btn btn-secondary" id="christian">Christian</button>
+                    <button class="btn btn-secondary" id="christian" style="height:50px;width:110px" font-size:"18px">Christian</button>
                     &nbsp;
-                    <button class="btn btn-secondary" id="classical">Classical</button>
+                    <button class="btn btn-secondary" id="classical" style="height:50px;width:110px" font-size:"18px">Classical</button>
                     &nbsp;
-                    <button class="btn btn-secondary" id="country">Country</button>
+                    <button class="btn btn-secondary" id="country" style="height:50px;width:110px" font-size:"18px">Country</button>
                     &nbsp;
-                    <button class="btn btn-secondary" id="dance_elec">Dance/Electric</button>
+                    <button class="btn btn-secondary" id="dance_elec" style="height:50px;width:110px" font-size:"18px">Dance/Electric</button>
                     &nbsp;
-                    <button class="btn btn-secondary" id="folk">Folk</button>
+                    <button class="btn btn-secondary" id="folk" style="height:50px;width:110px" font-size:"18px">Folk</button>
                     &nbsp;
-                    <button class="btn btn-secondary" id="hiphop">Hip Hop</button>
+                    <button class="btn btn-secondary" id="hiphop" style="height:50px;width:110px" font-size:"18px">Hip Hop</button>
                     &nbsp;
-                    <button class="btn btn-secondary" id="r_b">R&amp;B</button>
+                    <button class="btn btn-secondary" id="r_b" style="height:50px;width:110px" font-size:"18px">R&amp;B</button>
                     &nbsp;
-                    <button class="btn btn-secondary" id="rap">Rap</button>
+                    <button class="btn btn-secondary" id="rap" style="height:50px;width:110px" font-size:"18px">Rap</button>
                     &nbsp;
-                    <button class="btn btn-secondary" id="rock">Rock</button>
+                    <button class="btn btn-secondary" id="rock" style="height:50px;width:110px" font-size:"18px">Rock</button>
                 </div>
             </div>
         </div>

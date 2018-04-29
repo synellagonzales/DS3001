@@ -4,43 +4,53 @@ $(function () {
     });
     $('#alternative').click(function () {
         var genre = "Alternative"
-        genSpiderGenre(genre);
+        var color = "blue"
+        genSpiderGenre(genre, color);
     });
     $('#christian').click(function () {
         var genre = "Christian"
-        genSpiderGenre(genre);
+        var color = "gray"
+        genSpiderGenre(genre, color);
     });
     $('#classical').click(function () {
         var genre = "Classical"
-        genSpiderGenre(genre);
+        var color = "purple"
+        genSpiderGenre(genre, color);
     });
     $('#country').click(function () {
         var genre = "Country"
-        genSpiderGenre(genre);
+        var color = "yellow"
+        genSpiderGenre(genre, color);
     });
     $('#dance_elec').click(function () {
         var genre = "Dance\/Electronic"
-        genSpiderGenre(genre);
+        var color = "red"
+        genSpiderGenre(genre, color);
     });
     $('#folk').click(function () {
         var genre = "Folk"
-        genSpiderGenre(genre);
+        var color = "orange"
+        genSpiderGenre(genre, color);
     });
     $('#hiphop').click(function () {
         var genre = "HipHop"
-        genSpiderGenre(genre);
+        var color = "pink"
+        genSpiderGenre(genre, color);
     });
     $('#r_b').click(function () {
         var genre = "R&B"
-        genSpiderGenre(genre);
+        var color = "lime"
+        genSpiderGenre(genre, color);
     });
     $('#rap').click(function () {
         var genre = "Rap"
-        genSpiderGenre(genre);
+        var color = "aqua"
+        genSpiderGenre(genre, color);
     });
     $('#rock').click(function () {
         var genre = "Rock"
-        genSpiderGenre(genre);
+        var color = "fuchsia"
+        genSpiderGenre(genre, color);
     });
 
 });
@@ -91,13 +101,13 @@ function genSpider() {
             name: name,
             data: getSongAudioFeatures(name),
             pointPlacement: 'on',
-            color: 'red'
+            color: 'teal'
         };
         var genreData = {
             name: genre_predicted,
             data: getGenreAudioFeatures(genre_predicted),
             pointPlacement: 'on',
-            color: 'purple'
+            color: 'black'
         }
 
         options.series.push(songData);
@@ -107,7 +117,7 @@ function genSpider() {
     var chart = new Highcharts.Chart(options);
 }
 
-function genSpiderGenre(genre) {
+function genSpiderGenre(genre, gcolor) {
 
     var options = {
         chart: {
@@ -153,13 +163,13 @@ function genSpiderGenre(genre) {
             name: name,
             data: getSongAudioFeatures(name),
             pointPlacement: 'on',
-            color: 'red'
+            color: 'teal'
         };
         var genreData = {
             name: genre,
             data: getGenreAudioFeatures(genre),
             pointPlacement: 'on',
-            color: 'purple'
+            color: gcolor
         }
 
         options.series.push(songData);
